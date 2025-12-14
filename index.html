@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Planner</h1>
+
+        <div class="calendar">
+            <div class="header">
+                <button id="prev">&lt;</button>
+                <h2 id="month-year"></h2>
+                <button id="next">&gt;</button>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+                <div>Thu</div><div>Fri</div><div>Sat</div>
+            </div>
+            <div class="days" id="days"></div>
+        </div>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h3 id="modal-date"></h3>
+                <ul id="task-list"></ul>
+                <input type="text" id="new-task" placeholder="Add a new task..." />
+                <button id="add-task">Add Task</button>
+                <button id="close-modal" class="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
