@@ -1,17 +1,18 @@
 * { box-sizing: border-box; }
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f5f7fa;
+    background: #0f0f0f;
     margin: 0;
     padding: 20px;
+    color: #e0e0e0;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: #1a1a1a;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.5);
     overflow: hidden;
 }
 
@@ -19,8 +20,27 @@ h1 {
     text-align: center;
     padding: 20px;
     margin: 0;
-    background: #4a6bff;
-    color: white;
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+.current-datetime {
+    text-align: center;
+    padding: 20px 0;
+    background: #2d2d2d;
+    color: #ffffff;
+}
+
+#current-date {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#current-time {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .calendar {
@@ -40,6 +60,7 @@ h1 {
     font-size: 28px;
     cursor: pointer;
     padding: 0 10px;
+    color: #e0e0e0;
 }
 
 .weekdays {
@@ -47,7 +68,7 @@ h1 {
     grid-template-columns: repeat(7, 1fr);
     text-align: center;
     font-weight: bold;
-    color: #555;
+    color: #aaaaaa;
     margin-bottom: 10px;
 }
 
@@ -59,18 +80,18 @@ h1 {
 
 .day {
     height: 80px;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
     border-radius: 8px;
     padding: 8px;
     font-size: 14px;
     cursor: pointer;
-    background: #fafafa;
+    background: #242424;
     transition: all 0.2s;
     position: relative;
 }
 
 .day:hover {
-    background: #eef;
+    background: #333;
     transform: translateY(-2px);
 }
 
@@ -78,6 +99,7 @@ h1 {
     background: #4a6bff;
     color: white;
     font-weight: bold;
+    border-color: #4a6bff;
 }
 
 .day.has-tasks::after {
@@ -92,28 +114,28 @@ h1 {
 }
 
 .other-month {
-    color: #bbb;
-    background: #f9f9f9;
+    color: #666;
+    background: #1e1e1e;
 }
 
-/* Modal */
 .modal {
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.8);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    background: white;
+    background: #242424;
     padding: 20px;
     border-radius: 12px;
     width: 90%;
     max-width: 500px;
     max-height: 80vh;
     overflow-y: auto;
+    border: 1px solid #444;
 }
 
 #task-list {
@@ -123,34 +145,44 @@ h1 {
 }
 
 #task-list li {
-    padding: 10px;
-    background: #f1f3f5;
-    margin: 5px 0;
-    border-radius: 6px;
+    padding: 12px;
+    background: #2d2d2d;
+    margin: 8px 0;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 16px;
+}
+
+#task-list li .task-time {
+    font-weight: bold;
+    color: #4a9eff;
+    margin-right: 10px;
 }
 
 #task-list li.completed {
     text-decoration: line-through;
     opacity: 0.6;
-    background: #e8f5e8;
+    background: #1a2e1a;
 }
 
 #new-task {
     width: 70%;
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    border: 1px solid #444;
     border-radius: 6px;
+    background: #2d2d2d;
+    color: white;
 }
 
 #add-task, .close {
-    padding: 10px 15px;
+    padding: 12px 18px;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     margin-left: 10px;
+    font-size: 14px;
 }
 
 #add-task {
@@ -159,32 +191,6 @@ h1 {
 }
 
 .close {
-    background: #eee;
-}
-/* NEW: Current Date and Time Styles */
-.current-datetime {
-    text-align: center;
-    padding: 20px 0;
-    background: #4a6bff;
-    color: white;
-}
-
-#current-date {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-#current-time {
-    font-size: 48px;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-/* Make header background match if you want */
-h1 {
-    margin: 0;
-    padding: 20px;
-    background: #4a6bff;
+    background: #444;
     color: white;
 }
