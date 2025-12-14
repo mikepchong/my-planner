@@ -161,3 +161,30 @@ h1 {
 .close {
     background: #eee;
 }
+/* NEW: Current Date and Time Styles */
+.current-datetime {
+    text-align: center;
+    padding: 20px 0;
+    background: #4a6bff;
+    color: white;
+}
+
+#current-date {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#current-time {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Make header background match if you want */
+h1 {
+    margin: 0;
+    padding: 20px;
+    background: #4a6bff;
+    color: white;
+}
