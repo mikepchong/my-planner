@@ -155,3 +155,18 @@ nextBtn.addEventListener('click', () => {
 });
 
 renderCalendar();
+// NEW: Live Clock and Date
+function updateCurrentDateTime() {
+    const now = new Date();
+    
+    // Full date like "Sunday, December 14, 2025"
+    document.getElementById('current-date').textContent = 
+        now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+    
+    // Time like "03:45 PM"
+    document.getElementById('current-time').textContent = 
+        now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+}
+
+updateCurrentDateTime(); // Initial call
+setInterval(updateCurrentDateTime, 1000); // Update every second
